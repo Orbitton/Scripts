@@ -19,4 +19,6 @@ A list of space or tab separated ASINs can be entered in the input field. The sc
 First, use a modern browser (Chrome was used for testing and real-life usage), and navigate to the amazon website of choice.
 Paste the script in the web developer tools console, and run it.
 The tool will now appear overlayed on the website.
-Enter the 
+Enter the ASINs in the input field, and click "Check".
+Each ASIN will now be checked via a direct link. The contents of the returned page are inspected and the results reported.
+When finished, the results are listed in a table which can be copied and pasted in an Excel file for further processing by the end-user.
