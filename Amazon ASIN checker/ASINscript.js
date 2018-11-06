@@ -1,14 +1,14 @@
 /*
 	Creator: https://github.com/orbitton
 	Commissioned by: Wouter Geurtsen
-	Date: 18-08-2018
-	Version: 1.2018.08.18.0
+	Date: 06-11-2018
+	Version: 1.2018.11.06.0
 	
 	For checking availability of products on Amazon by ASIN
 */
 
 (function(e, s) {
-	var checkerAppVersion = '1.2018.08.18.0';
+	var checkerAppVersion = '1.2018.11.06.0';
 	
     e.src = s;
     e.onload = function() {
@@ -66,7 +66,7 @@
 			},
 			'es' : {
 				'availability' : {
-					'In stock (expected)' : 'Envío en',
+					'In stock (expected)' : 'EnvÃ­o en',
 					'In stock' : 'En stock',
 					
 					'Unavailable' : 'No disponible', /*unverified*/
@@ -76,9 +76,9 @@
 			},
 			'it' : {
 				'availability' : {
-					'In stock (special)' : 'Disponibilità: ',
+					'In stock (special)' : 'DisponibilitÃ : ',
 					'In stock (dispatch)' : 'Generalmente spedito',
-					'In stock' : 'Disponibilità immediata',
+					'In stock' : 'DisponibilitÃ  immediata',
 					
 					'Unavailable' : 'Attualmente non disponibile.', /*unverified*/
 				}
@@ -89,7 +89,7 @@
 					
 					'Unavailable' : 'Actuellement indisponible.',
 					'Temporarily out of stock' : 'Temporairement en rupture de stock.',/*can be ordered*/
-					'Availability unknown' : 'Disponibilité inconnue', /*unverified*/
+					'Availability unknown' : 'DisponibilitÃ© inconnue', /*unverified*/
 					'Individual dealers' : 'Voir les offres',
 				}
 			},
@@ -133,7 +133,7 @@
 		checkVendorResults = function(asin, str) {
 			var regex = new RegExp(/id="bylineInfo"[^>]*>([^<]*)<\/a>/gi);
 			var matches = regex.exec(str);
-			if (typeof matches[1] !== undefined) {
+			if (matches && typeof matches[1] !== undefined) {
 				setResult(asin, matches[1], 'vendor' );
 				return true;
 			}
